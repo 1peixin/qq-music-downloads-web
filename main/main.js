@@ -73,10 +73,10 @@ function ajax_music() {
 }
 
 function switch_page(page) {
-    $('footer a[href="/#/' + page + '"]').click();
+    $('footer a[href="./#/' + page + '"]').click();
     $('footer a').removeClass('mdui-bottom-nav-active');
-    $('footer a[href="/#/' + page + '"]').addClass('mdui-bottom-nav-active');
-    window.location.href = '/#/' + page;
+    $('footer a[href="./#/' + page + '"]').addClass('mdui-bottom-nav-active');
+    window.location.href = './#/' + page;
 }
 
 const url_page = location.hash.replace(/^#\//, '');
@@ -86,7 +86,7 @@ if (url_page === '') {
 } else {
     document.getElementById(url_page).style.display = 'block';
     $('footer a').removeClass('mdui-bottom-nav-active');
-    $('footer a[href="/#/' + url_page + '"]').addClass('mdui-bottom-nav-active');
+    $('footer a[href="./#/' + url_page + '"]').addClass('mdui-bottom-nav-active');
 
     if (url_page === 'music') {
         $('#music-list').html('');
