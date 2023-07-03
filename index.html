@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link rel="stylesheet" href="./mdui-v1.0.1/css/mdui.min.css" />
+    <link rel="stylesheet" href="./main/main.css" />
+    <title>QQ歌单音乐解析</title>
+</head>
+
+<body class="mdui-bottom-nav-fixed mdui-theme-primary-indigo mdui-theme-accent-indigo">
+    <nav class="mdui-container">
+        <section style="display: none;" id="search" class="mdui-p-a-2">
+            <div class="mdui-typo">
+                <h1 class="mdui-text-center">QQ歌单音乐解析</h1>
+                <br>
+                <div class="textfield-border-blue">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">歌单链接</label>
+                        <textarea class="mdui-textfield-input" type="text"></textarea>
+                    </div>
+                    <div class="mdui-textfield-error"></div>
+                </div>
+                <br>
+                <button id="searchButton" class="mdui-btn-raised mdui-float-right mdui-btn mdui-color-theme mdui-ripple"
+                    disabled>搜索</button>
+            </div>
+        </section>
+
+        <section style="display: none;" id="music" class="mdui-p-a-2">
+            <div class="music-list">
+                <li class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-content">
+                        <span>歌单数量：<a id="music-list-number">0</a></span>
+                    </div>
+                    <button id="music-download-all" class="mdui-btn mdui-color-theme-accent mdui-ripple">下载全部</button>
+                </li>
+                <ul id="music-list" class="mdui-list"></ul>
+            </div>
+        </section>
+
+        <section style="display: none;" id="download" class="mdui-p-a-2 download-list">
+
+            <div class="mdui-typo">
+                <span>任务id：<span id="download-show-id">无任务</span><span class="mdui-float-right">剩余 <span id="download-surplus-show">0</span> 首</span></span>
+                <div class="mdui-progress mdui-m-t-2 mdui-m-b-2">
+                    <div id="download-progress-show" class="mdui-progress-determinate"></div>
+                </div>
+                <h4 class="mdui-m-a-0"><small class="mdui-typo-display-1-opacity">zip名称：<span id="download-show-zip-name">无任务</span></small></h4>
+                <hr />
+            </div>
+
+            <div class="mdui-tab mdui-tab-full-width" id="music-list-tab">
+                <a href="#tab-200-content" id="music-list-tab-200" class="mdui-ripple">成功：<span
+                        id="download-200-number">0</span></a>
+                <a href="#tab-err-content" id="music-list-tab-err" class="mdui-ripple">失败：<span
+                        id="download-err-number">0</span></a>
+            </div>
+
+            <div id="tab-200-content">
+                <ul id="download-200-list" class="mdui-list"></ul>
+            </div>
+
+            <div id="tab-err-content">
+                <ul id="download-err-list" class="mdui-list"></ul>
+            </div>
+
+        </section>
+    </nav>
+    <footer class="mdui-bottom-nav">
+        <a href="/#/search" class="mdui-ripple">
+            <i class="mdui-icon material-icons">search</i>
+            <label>搜索</label>
+        </a>
+        <a href="/#/music" class="mdui-ripple">
+            <i class="mdui-icon material-icons">music_note</i>
+            <label>音乐</label>
+        </a>
+        <a href="/#/download" class="mdui-ripple">
+            <i class="mdui-icon material-icons">file_download</i>
+            <label>下载</label>
+        </a>
+    </footer>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdn.bootcss.com/jszip-utils/0.0.2/jszip-utils.min.js"></script>
+    <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+
+    <script src="./mdui-v1.0.1/js/mdui.min.js"></script>
+    <script src="./main/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+@keyframes transition_1 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.mdui-container section {
+    animation: transition_1 .3s ease-out;
+}
+
+.textfield-border-blue {
+    border: rgba(0, 0, 0, .45) 2px solid;
+    border-radius: 8px;
+    transition: 0.2s all;
+    position: relative;
+}
+
+.textfield-border-blue .mdui-textfield {
+    margin: 0 16px;
+    margin-bottom: -1px;
+    padding: 0;
+    margin-top: -14px;
+}
+
+.textfield-border-blue .mdui-textfield textarea {
+    border-color: transparent !important;
+    height: 82px;
+    padding-top: 0px;
+}
+
+.textfield-border-blue .mdui-textfield label {
+    background-color: #fff;
+    width: auto;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.mdui-textfield-floating-label.mdui-textfield-focus .mdui-textfield-label {
+    color: #3f51b5 !important;
+}
+
+.textfield-border-blue:focus-within {
+    border: #3f51b5 2px solid;
+    transition: 0.2s all;
+}
+
+.mdui-textfield-error {
+    bottom: -24px;
+    left: 16px;
+}
+
+.music-list .mdui-list-item {
+    border-radius: 4px;
+    cursor: auto;
+}
+
+.music-list .mdui-list-item:hover {
+    background-color: rgba(0, 0, 0, .0) !important;
+}
+
+.music-list .mdui-list-item .mdui-card-header-subtitle {
+    display: initial;
+    margin-left: 4px !important;
+}
+
+footer {
+    backdrop-filter: blur(10px);
+    background-color: rgb(255, 255, 255,0.7);
+}
+
+.download-list .mdui-list-item {
+    border-radius: 4px;
+    cursor: auto;
+}
+
+.download-list .mdui-list-item:hover {
+    background-color: rgba(0, 0, 0, .0) !important;
+}
+
+.download-list .mdui-list-item .mdui-card-header-subtitle {
+    display: initial;
+    margin-left: 4px !important;
+}
+
+#music-list-tab span {
+    display: contents;
+}
+
+.mdui-list-item-content {
+    display: grid;
+}
