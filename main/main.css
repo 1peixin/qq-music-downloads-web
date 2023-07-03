@@ -85,7 +85,7 @@ footer {
 
 .download-list .mdui-list-item .mdui-card-header-subtitle {
     display: initial;
-    margin-left: 4px !important;
+    margin-left: 0px !important;
 }
 
 #music-list-tab span {
@@ -94,4 +94,15 @@ footer {
 
 .mdui-list-item-content {
     display: grid;
+}
+
+.mdui-list .mdui-list-item .mdui-list-item-content span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.mdui-list-item-content span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
